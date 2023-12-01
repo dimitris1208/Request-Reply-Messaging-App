@@ -34,7 +34,7 @@ public class Client {
                 case 2 :
                 case 4 :
                     //gets username ( or authToken if cases 2,4 ) from arguments and sends it to the server
-                    out.println(args[3];);
+                    out.println(args[3]);
                     break;
                 case 3 :
                     //gets authToken from arguments and sends it to server
@@ -47,9 +47,9 @@ public class Client {
                 case 5 :
                 case 6 :
                     //gets authToken from arguments and sends it to server
-                    out.println(args[3];);
+                    out.println(args[3]);
                     //gets message_id from arguments and sends it to server
-                    out.println(args[4];);
+                    out.println(args[4]);
                     break;
 
             }
@@ -59,6 +59,11 @@ public class Client {
             while ((serverResponse = in.readLine()) != null) {
                 System.out.println(serverResponse);
             }
+
+            // Close resources
+            out.close();
+            in.close();
+            socket.close();
 
         }catch (IOException e ){
             e.printStackTrace();
