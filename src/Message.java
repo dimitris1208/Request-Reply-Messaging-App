@@ -1,3 +1,4 @@
+package ServerSide ;
 public class Message {
     boolean isRead;
     String sender ;
