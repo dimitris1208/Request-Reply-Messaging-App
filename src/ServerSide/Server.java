@@ -68,13 +68,14 @@ public class Server {
                 } catch (NumberFormatException e) {
                     e.printStackTrace();
                 }
-
+                int token=0;
                 switch (function){
                     case 1 :
                         createAccount(in.readLine(),out);
                         break;
+
                     case 2 :
-                        int token=0;
+
                         try {
                             token = Integer.parseInt(in.readLine());
                         } catch (NumberFormatException e) {
@@ -82,6 +83,15 @@ public class Server {
                         }
                         showAccounts(token,out);
                         break;
+
+                    case 3 :
+
+                        try {
+                            token= Integer.parseInt(in.readLine());
+                        } catch (NumberFormatException e) {
+                            e.printStackTrace();
+                        }
+
 
                 }
 
