@@ -5,8 +5,8 @@ import java.util.*;
 public class Client {
     public static void main(String[] args) {
         String ip ;
-        int port ;
-        int function ;
+        int port = 0;
+        int function = 0;
 
         ip = args[0];
         // transmit string inputs port and function to integers
